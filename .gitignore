@@ -1,0 +1,12 @@
+# Jupyter
+.ipynb_checkpoints/
+.jupyter/
+.local/
+.ipython/
+
+# OS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
