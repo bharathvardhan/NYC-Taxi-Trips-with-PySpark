@@ -1,6 +1,6 @@
-#  NYC Taxi Trips with PySpark
+# NYC Taxi Trips with PySpark
 
-This folder contains **main** analyze NYC taxi-style trip data using **PySpark DataFrames** (Docker environment recommended).
+This folder contains **Q1** of HW3: work in **`q1.ipynb`** to analyze NYC taxi-style trip data using **PySpark DataFrames** (Docker environment recommended).
 
 ## Technology
 
@@ -15,11 +15,14 @@ This folder contains **main** analyze NYC taxi-style trip data using **PySpark D
 ## Docker setup (recommended)
 
 1. Install [Docker Desktop](https://www.docker.com/products/docker-desktop/) (or Docker Engine).
-2. From your **project directory** (parent of `Q1/`), run:
+2. Run Docker from the directory that should appear as `/root` in the container (so Jupyter sees **`q1.ipynb`** and the CSV):
+
+   - **This repo (notebook at repo root):** `cd` into the clone, then use `-v "${PWD}:/root"`.
+   - **Course skeleton layout** (a `Q1/` subfolder next to other HW folders): from the **parent** of `Q1/`, use `-v "${PWD}/Q1:/root"`.
 
 ```bash
 docker container run -d \
-  -v "${PWD}/main:/root" \
+  -v "${PWD}:/root" \
   -p 127.0.0.1:6242:8888 \
   --name hw3 \
   polodataclub/cse6242hw3-public:Q1
